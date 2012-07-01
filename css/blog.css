@@ -1,0 +1,28 @@
+/********************************************************************************************/
+/*   bold-font "myriad-pro-semi-condensed-1","myriad-pro-semi-condensed-2",Arial,sans-serif
+/*   normal-font font-family: myriad-pro-1, myriad-pro-2, Arial, sans-serif;
+/********************************************************************************************/
+
+
+
+body{
+	background-image: url("../img/bg.png");
+	background-repeat: repeat;
+}
+
+header{
+	margin: 30px;
+}
+
+h1,h2,h3,h4,h5,h6{
+	
+}
+
+.container-fluid{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+
+
