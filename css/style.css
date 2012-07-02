@@ -65,6 +65,7 @@ h1 {
 	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	-moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
+	margin-bottom:100px;
 }
 
 .postDate {
