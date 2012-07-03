@@ -129,7 +129,7 @@ h1 {
 
 .postTitle h1 {
 	margin-left: 30px;
-	border-bottom: 1px solid #EEE;
+	border-bottom: 1px solid #D6CDCD;
 	font-weight:lighter;
 	font-size:40px;
 }
@@ -154,14 +154,25 @@ h1 {
 	font-size: 16px;
 }
 
-.postMore {
+.postContent .fullText{
+	display:none;
+}
+
+.postMore{
+	background-color:red;
+	display:block;
+}
+
+.postMore span{
+	float:right;
+	background-color: rgba(75, 143, 173, 0.30);
 	margin-top:30px;
 	text-align: right;
-	color: #659BBF;
 	font-size: 28px;
+	padding:10px;
 }
 
 .postMore span:hover {
-	color: #275E75;
-	cursor: hand
+	background-color: rgba(75, 143, 173, 0.60);
+	cursor: pointer;
 }
