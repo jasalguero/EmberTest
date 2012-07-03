@@ -26,7 +26,7 @@ body {
 	/**background-image: url("../img/bg.png");*/
 	background-color: #F5F5EC;
 	background-repeat: repeat;
-	font-family: 'MetrophobicRegular' Arial, Helvetica, sans-serif;
+	font-family: MetrophobicRegular, Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -34,7 +34,7 @@ header {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'ColaborateThinRegular' Arial, Helvetica, sans-serif;
+	font-family: ColaborateThinRegular, Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -73,7 +73,7 @@ h1 {
 .postDate {
 	height: 65px;
 	width: 60px;
-	background-color: rgba(75, 143, 173, 0.58);
+	background-color: rgba(75, 143, 173, 0.6);
 	border-right: 1px solid #A0A097;
 	border-bottom: 1px solid #A0A097;
 	float: left;
@@ -160,20 +160,27 @@ h1 {
 }
 
 .postMore{
-	background-color:red;
 	display:block;
+	margin-left: 650px;
 }
 
 .postMore span{
 	float:right;
-	background-color: rgba(75, 143, 173, 0.30);
+	width:200px;
+	line-height:30px;
+	background-color: rgba(75, 143, 173, 0.6);
 	margin-top:30px;
 	text-align: right;
-	font-size: 28px;
+	font-size: 30px;
 	padding:10px;
+	border-right: 1px solid #A0A097;
+	border-bottom: 1px solid #A0A097;
+	-webkit-box-shadow: 3px 3px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 3px 3px 2px rgba(50, 50, 50, 0.5);
+	box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.5);
 }
 
 .postMore span:hover {
-	background-color: rgba(75, 143, 173, 0.60);
+	background-color: rgba(75, 143, 173, 1);
 	cursor: pointer;
 }
