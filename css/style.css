@@ -23,7 +23,8 @@
 }
 
 body {
-	background-image: url("../img/bg.png");
+	/**background-image: url("../img/bg.png");*/
+	background-color: #F5F5EC;
 	background-repeat: repeat;
 	font-family: 'MetrophobicRegular' Arial, Helvetica, sans-serif;
 }
@@ -57,30 +58,33 @@ h1 {
 
 .post {
 	background-color: #FAFAFA;
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border: 1px solid #C4C4C4;
+	/*border-radius: 3px;
+	 -moz-border-radius: 3px;
+	 -webkit-border-radius: 3px;
+	 border: 1px solid #C4C4C4;*/
+	border: 2px solid rgba(207, 207, 198, 0.56);
 	padding: 10px;
 	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	-moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
-	margin-bottom:100px;
+	margin-bottom: 100px;
 }
 
 .postDate {
 	height: 65px;
 	width: 60px;
-	background-color: #987;
-	background-color: #F5F5EC;
-	border-right: 1px solid #EAEADD;
-	border-bottom: 1px solid #EAEADD;
+	background-color: rgba(75, 143, 173, 0.58);
+	border-right: 1px solid #A0A097;
+	border-bottom: 1px solid #A0A097;
 	float: left;
 	position: relative;
-	margin-left: -10px;
-	margin-top: -10px;
+	margin-left: -25px;
+	margin-top: -35px;
 	font-size: 15px;
 	text-align: center;
+	-webkit-box-shadow: 3px 3px 2px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 3px 3px 2px rgba(50, 50, 50, 0.5);
+	box-shadow: 3px 3px 3px rgba(50, 50, 50, 0.5);
 }
 
 .postDate .day {
@@ -117,29 +121,32 @@ h1 {
 	margin-right: 2px;
 }
 
-.postHeader a {
-	color: #BBDAF1;
-	font-weight: bold;
-}
-.postHeader a:hover {
-	color: #659BBF;
-	font-weight: bold;
-	text-decoration: none;
-}
-
 .postTitle {
-	text-align: right;
+	text-align: left;
 	margin-left: 40px;
 	padding-bottom: 15px;
 }
 
-.postTitle h1{
+.postTitle h1 {
 	margin-left: 30px;
 	border-bottom: 1px solid #EEE;
+	font-weight:lighter;
+	font-size:40px;
+}
+
+.postHeader a {
+	color: #659BBF;
+	font-weight: bold;
+}
+.postHeader a:hover {
+	color: #275E75;
+	font-weight: bold;
+	text-decoration: none;
 }
 
 .postHeader small {
 	color: #C0C0B5;
+	float: right;
 }
 
 .postContent {
@@ -147,13 +154,14 @@ h1 {
 	font-size: 16px;
 }
 
-.postMore{
-	text-align:right;
-	color:#BBDAF1;
-	font-size:28px;
+.postMore {
+	margin-top:30px;
+	text-align: right;
+	color: #659BBF;
+	font-size: 28px;
 }
 
-.postMore span:hover{
-	color: #659BBF;
+.postMore span:hover {
+	color: #275E75;
 	cursor: hand
 }
