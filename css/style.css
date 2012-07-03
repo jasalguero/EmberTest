@@ -111,12 +111,13 @@ h1 {
 	font-size: 24px;
 }
 
-.postHeader {
+.post header {
+	margin: 0px;
 	height: 70px;
 	border: 1px transparent solid;
 }
 
-.postHeader .comments {
+.post header .comments {
 	margin-left: 2px;
 	margin-right: 2px;
 }
@@ -134,17 +135,17 @@ h1 {
 	font-size:40px;
 }
 
-.postHeader a {
+.post header a {
 	color: #659BBF;
 	font-weight: bold;
 }
-.postHeader a:hover {
+.post header a:hover {
 	color: #275E75;
 	font-weight: bold;
 	text-decoration: none;
 }
 
-.postHeader small {
+.post header small {
 	color: #C0C0B5;
 	float: right;
 }
