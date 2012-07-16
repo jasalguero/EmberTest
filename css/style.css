@@ -22,6 +22,15 @@
 	font-style: normal;
 }
 
+.fill { 
+    min-height: 100%;
+    position: relative; 
+}
+
+html, body {
+    height: 100%;
+}
+
 body {
 	background-image: url("../img/bg2.png");
 	background-color: #F5F5EC;
@@ -30,10 +39,13 @@ body {
 }
 
 header {
-	margin: 30px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	margin-left: 30px;
+	
 }
-
 h1, h2, h3, h4, h5, h6 {
+
 	font-family: ColaborateThinRegular, Arial, Helvetica, sans-serif;
 }
 
@@ -53,21 +65,20 @@ h1 {
 }
 
 .centerContainer {
-	margin: 30px;
+	margin-top: 15px;
+	margin-left: 30px;
+	margin-bottom: 15px;
+	margin-right: 30px;
 }
 
 .post {
 	background-color: #FAFAFA;
-	/*border-radius: 3px;
-	 -moz-border-radius: 3px;
-	 -webkit-border-radius: 3px;
-	 border: 1px solid #C4C4C4;*/
 	border: 2px solid rgba(207, 207, 198, 0.56);
-	padding: 10px;
+	padding: 15px;
 	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	-moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
 	box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 
 .postDate {
@@ -113,7 +124,6 @@ h1 {
 
 .post header {
 	margin: 0px;
-	height: 70px;
 	border: 1px transparent solid;
 }
 
@@ -161,17 +171,14 @@ h1 {
 
 .postMore{
 	display:block;
-	margin-left: 650px;
 }
 
 .postMore span{
 	float:right;
-	width:200px;
-	line-height:30px;
+	width: 120px;
 	background-color: rgba(75, 143, 173, 0.6);
-	margin-top:30px;
-	text-align: right;
-	font-size: 30px;
+	text-align: center;
+	font-size: 20px;
 	padding:10px;
 	border-right: 1px solid #A0A097;
 	border-bottom: 1px solid #A0A097;
@@ -183,4 +190,28 @@ h1 {
 .postMore span:hover {
 	background-color: rgba(75, 143, 173, 1);
 	cursor: pointer;
+}
+
+#menuContainer{
+	margin-top: 15px;
+	width: 250px;
+	background-color: #FAFAFA;
+	border: 2px solid rgba(207, 207, 198, 0.56);
+	-webkit-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
+	-moz-box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
+	box-shadow: 7px 7px 5px rgba(50, 50, 50, 0.5);
+	margin-bottom: 200px;
+}
+
+.menuOption{
+	display:block;	
+	padding: 10px;	
+	margin-bottom: 20px;
+}
+
+#menuContainer h1{
+	border-bottom: 1px solid #D6CDCD;
+	font-weight: bold;
+	font-size: 20px;
+	text-transform: uppercase;
 }
