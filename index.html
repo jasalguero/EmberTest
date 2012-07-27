@@ -57,6 +57,14 @@
 				<section id="postList">
 					<div class="span7 centerContainer">
 
+						<script type="text/x-handlebars">
+							{{#each HaBlog.dataController}}
+								{{#view HaBlog.PostSummaryListView contentBinding="this"}}
+									{{content.title}} from {{content.pub_name}} on {{content.pub_date}}
+								{{/view}}
+							{{/each}}
+						</script>
+
 						<!-- POST -->
 						<article>
 							<div class="post span11">
@@ -328,5 +336,6 @@
 		</script>
 		<script src="js/libs/ember-0.9.8.1.min.js"></script>
 		<script src="js/app.js"></script>
+		<script src="js/hablog.js"></script>
 	</body>
 </html>
