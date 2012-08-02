@@ -58,253 +58,61 @@
 					<div class="span7 centerContainer">
 
 						<script type="text/x-handlebars">
-							{{#each HaBlog.dataController}}
+							{{#each HaBlog.postsController}}
 								{{#view HaBlog.PostSummaryListView contentBinding="this"}}
-									{{content.title}} from {{content.pub_name}} on {{content.pub_date}}
+									<div class="post span11">
+										<header>
+											<div class="postDate">
+												<span class="day">{{creationDay}}</span>
+												<span class="month">{{creationMonth}}</span>
+												<span class="year">{{creationYear}}</span>
+											</div>
+											<div class="postTitle">
+												<span><h1>{{content.title}}</h1></span>
+												<small> 
+													<span class="comments"> 
+														<i class="icon-comment"> </i> 
+														<span>0</span> 
+													</span> 
+													<span class="tags"> 
+														<i class="icon-tags"> </i>
+															<span> 
+																{{#each content.tags}}
+																	<a href="#">{{tag}}</a>
+																{{/each}}
+															</span>
+													</span> 
+													<span class="author"> 
+														Posted by <a href="#">{{content.author}}</a> 
+													</span> 
+												</small>
+											</div>
+										</header>
+										<div class="postContent">
+											<section class="summary">
+												<p>
+													Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+												</p>
+											</section>
+											<section class="fullText">
+												{{#each content.sections}}
+													{{#if headline}}
+														<span><h2>{{headline}}</h2></span>
+													{{/if}}
+													<p>{{text}}</p>
+												{{/each}}
+											</section>
+											<div class="postMore">
+												<span class="toggleButton" {{action "toggleButtons"}}>READ MORE</span>
+												<span class="toggleButton" {{action "toggleButtons"}} style="display:none">READ LESS</span>
+											</div>
+											<div class="clear" style="float:clear"></div>
+										</div>										
+									</div>								
 								{{/view}}
 							{{/each}}
 						</script>
 
-						<!-- POST -->
-						<article>
-							<div class="post span11">
-								<header>
-									<div class="postDate">
-										<span class="day">1</span>
-										<span class="month">July</span>
-										<span class="year">2012</span>
-									</div>
-									<!--<span class="postDate"> MAY <strong>5</strong> 2012 </span>-->
-									<div class="postTitle">
-										<span><h1>Post Title</h1></span>
-										<small> <span class="comments"> <i class="icon-comment"> </i> <span>0</span> </span> <span class="tags"> <i class="icon-tags"> </i> <span> <a href="#">software</a>, <a href="#">scala</a> </span> </span> <span class="author"> Posted by <a href="#">PPrang</a> </span> </small>
-									</div>
-
-								</header>
-								<div class="postContent">
-									<section class="summary">
-										<p>
-											Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-										</p>
-									</section>
-									<section class="fullText">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna diam, gravida id posuere a, tristique consectetur tellus. Maecenas pellentesque dapibus metus nec cursus. Proin vitae orci felis. Suspendisse in dui ligula, in sodales enim. Nulla quam dolor, ornare eget aliquet quis, ultrices vel purus. Integer id justo enim, eu hendrerit neque. In urna felis, rutrum eu tempor non, malesuada id odio. Nulla in felis quis nisl luctus tincidunt. In eget auctor sapien. Sed risus mauris, pretium sed aliquam eu, scelerisque vulputate justo. Proin at porta odio. Vivamus sodales massa ac neque ullamcorper dignissim. Donec sed eros vitae orci luctus imperdiet id nec sapien. Integer auctor nulla eu nulla posuere consectetur. Maecenas a est tellus, et fermentum lorem.
-										</p>
-										<p>
-											Praesent sapien sem, sollicitudin non varius sed, aliquet commodo urna. Nulla libero dolor, faucibus ac sodales nec, egestas suscipit tellus. Maecenas hendrerit interdum tortor et congue. Suspendisse laoreet facilisis augue. Praesent euismod magna id lorem venenatis volutpat. Maecenas in justo eget ante malesuada malesuada eget at odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										</p>
-										<p>
-											Fusce ultrices rutrum velit eget condimentum. Donec ac felis vel enim fermentum feugiat. Cras lacinia lacinia vestibulum. Nulla condimentum arcu et est egestas ut pretium odio pretium. Duis leo enim, pellentesque non pretium gravida, euismod in eros. Suspendisse odio tellus, dictum quis interdum at, aliquam condimentum dui. Duis vitae nibh non magna volutpat condimentum. Praesent molestie mattis erat, quis blandit nisi dapibus a. Ut convallis aliquet diam quis rhoncus.
-										</p>
-										<p>
-											Nulla facilisi. Cras bibendum tristique molestie. Pellentesque placerat tellus vitae orci lobortis consequat. Integer vitae tortor justo, in semper leo. Duis accumsan tincidunt tellus ac ultrices. Donec lacinia posuere tristique. Integer vehicula lacus id sem ornare at mollis odio vehicula. Phasellus mauris est, viverra eget porttitor at, mollis ut urna. Pellentesque eu sem vel purus pellentesque imperdiet at ac sem.
-										</p>
-										<p>
-											Vivamus dui eros, tempor non consectetur dapibus, mattis vitae risus. Mauris blandit, risus ut mattis lacinia, est dui tincidunt est, id ornare tortor orci ac eros. Vivamus metus enim, commodo sed pretium eget, aliquam et arcu. Morbi imperdiet, tellus condimentum pellentesque consequat, nisi urna posuere nunc, sit amet rutrum elit ligula nec turpis. In metus mi, dapibus non placerat et, viverra vel purus. Nullam vitae velit purus, in condimentum magna. Etiam eu ipsum iaculis felis fringilla euismod. Suspendisse ac est quis nibh ultrices tristique. Donec nec sem risus, in pharetra ipsum. Curabitur sed quam nisi, at ultricies ligula. Donec adipiscing mattis justo non placerat. Pellentesque dui leo, egestas eu interdum in, faucibus ut neque. Sed et ligula sit amet leo tincidunt semper. Mauris interdum auctor nulla id convallis.
-										</p>
-									</section>
-									<div class="postMore">
-										<span class="toggleButton">READ MORE</span>
-										<span class="toggleButton" style="display:none">READ LESS</span>
-									</div>
-									<div class="clear" style="float:clear"></div>
-								</div>
-
-							</div>
-						</article>
-						<!-- POST -->
-						<article>
-							<div class="post span11">
-								<header>
-									<div class="postDate">
-										<span class="day">1</span>
-										<span class="month">July</span>
-										<span class="year">2012</span>
-									</div>
-									<!--<span class="postDate"> MAY <strong>5</strong> 2012 </span>-->
-									<div class="postTitle">
-										<span><h1>Post Title</h1></span>
-										<small> <span class="comments"> <i class="icon-comment"> </i> <span>0</span> </span> <span class="tags"> <i class="icon-tags"> </i> <span> <a href="#">software</a>, <a href="#">scala</a> </span> </span> <span class="author"> Posted by <a href="#">PPrang</a> </span> </small>
-									</div>
-
-								</header>
-								<div class="postContent">
-									<section class="summary">
-										<p>
-											Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-										</p>
-									</section>
-									<section class="fullText">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna diam, gravida id posuere a, tristique consectetur tellus. Maecenas pellentesque dapibus metus nec cursus. Proin vitae orci felis. Suspendisse in dui ligula, in sodales enim. Nulla quam dolor, ornare eget aliquet quis, ultrices vel purus. Integer id justo enim, eu hendrerit neque. In urna felis, rutrum eu tempor non, malesuada id odio. Nulla in felis quis nisl luctus tincidunt. In eget auctor sapien. Sed risus mauris, pretium sed aliquam eu, scelerisque vulputate justo. Proin at porta odio. Vivamus sodales massa ac neque ullamcorper dignissim. Donec sed eros vitae orci luctus imperdiet id nec sapien. Integer auctor nulla eu nulla posuere consectetur. Maecenas a est tellus, et fermentum lorem.
-										</p>
-										<p>
-											Praesent sapien sem, sollicitudin non varius sed, aliquet commodo urna. Nulla libero dolor, faucibus ac sodales nec, egestas suscipit tellus. Maecenas hendrerit interdum tortor et congue. Suspendisse laoreet facilisis augue. Praesent euismod magna id lorem venenatis volutpat. Maecenas in justo eget ante malesuada malesuada eget at odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										</p>
-										<p>
-											Fusce ultrices rutrum velit eget condimentum. Donec ac felis vel enim fermentum feugiat. Cras lacinia lacinia vestibulum. Nulla condimentum arcu et est egestas ut pretium odio pretium. Duis leo enim, pellentesque non pretium gravida, euismod in eros. Suspendisse odio tellus, dictum quis interdum at, aliquam condimentum dui. Duis vitae nibh non magna volutpat condimentum. Praesent molestie mattis erat, quis blandit nisi dapibus a. Ut convallis aliquet diam quis rhoncus.
-										</p>
-										<p>
-											Nulla facilisi. Cras bibendum tristique molestie. Pellentesque placerat tellus vitae orci lobortis consequat. Integer vitae tortor justo, in semper leo. Duis accumsan tincidunt tellus ac ultrices. Donec lacinia posuere tristique. Integer vehicula lacus id sem ornare at mollis odio vehicula. Phasellus mauris est, viverra eget porttitor at, mollis ut urna. Pellentesque eu sem vel purus pellentesque imperdiet at ac sem.
-										</p>
-										<p>
-											Vivamus dui eros, tempor non consectetur dapibus, mattis vitae risus. Mauris blandit, risus ut mattis lacinia, est dui tincidunt est, id ornare tortor orci ac eros. Vivamus metus enim, commodo sed pretium eget, aliquam et arcu. Morbi imperdiet, tellus condimentum pellentesque consequat, nisi urna posuere nunc, sit amet rutrum elit ligula nec turpis. In metus mi, dapibus non placerat et, viverra vel purus. Nullam vitae velit purus, in condimentum magna. Etiam eu ipsum iaculis felis fringilla euismod. Suspendisse ac est quis nibh ultrices tristique. Donec nec sem risus, in pharetra ipsum. Curabitur sed quam nisi, at ultricies ligula. Donec adipiscing mattis justo non placerat. Pellentesque dui leo, egestas eu interdum in, faucibus ut neque. Sed et ligula sit amet leo tincidunt semper. Mauris interdum auctor nulla id convallis.
-										</p>
-									</section>
-									<div class="postMore">
-										<span class="toggleButton">READ MORE</span>
-										<span class="toggleButton" style="display:none">READ LESS</span>
-									</div>
-									<div class="clear" style="float:clear"></div>
-								</div>
-
-							</div>
-						</article>
-						<!-- POST -->
-						<article>
-							<div class="post span11">
-								<header>
-									<div class="postDate">
-										<span class="day">1</span>
-										<span class="month">July</span>
-										<span class="year">2012</span>
-									</div>
-									<!--<span class="postDate"> MAY <strong>5</strong> 2012 </span>-->
-									<div class="postTitle">
-										<span><h1>Post Title</h1></span>
-										<small> <span class="comments"> <i class="icon-comment"> </i> <span>0</span> </span> <span class="tags"> <i class="icon-tags"> </i> <span> <a href="#">software</a>, <a href="#">scala</a> </span> </span> <span class="author"> Posted by <a href="#">PPrang</a> </span> </small>
-									</div>
-
-								</header>
-								<div class="postContent">
-									<section class="summary">
-										<p>
-											Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-										</p>
-									</section>
-									<section class="fullText">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna diam, gravida id posuere a, tristique consectetur tellus. Maecenas pellentesque dapibus metus nec cursus. Proin vitae orci felis. Suspendisse in dui ligula, in sodales enim. Nulla quam dolor, ornare eget aliquet quis, ultrices vel purus. Integer id justo enim, eu hendrerit neque. In urna felis, rutrum eu tempor non, malesuada id odio. Nulla in felis quis nisl luctus tincidunt. In eget auctor sapien. Sed risus mauris, pretium sed aliquam eu, scelerisque vulputate justo. Proin at porta odio. Vivamus sodales massa ac neque ullamcorper dignissim. Donec sed eros vitae orci luctus imperdiet id nec sapien. Integer auctor nulla eu nulla posuere consectetur. Maecenas a est tellus, et fermentum lorem.
-										</p>
-										<p>
-											Praesent sapien sem, sollicitudin non varius sed, aliquet commodo urna. Nulla libero dolor, faucibus ac sodales nec, egestas suscipit tellus. Maecenas hendrerit interdum tortor et congue. Suspendisse laoreet facilisis augue. Praesent euismod magna id lorem venenatis volutpat. Maecenas in justo eget ante malesuada malesuada eget at odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										</p>
-										<p>
-											Fusce ultrices rutrum velit eget condimentum. Donec ac felis vel enim fermentum feugiat. Cras lacinia lacinia vestibulum. Nulla condimentum arcu et est egestas ut pretium odio pretium. Duis leo enim, pellentesque non pretium gravida, euismod in eros. Suspendisse odio tellus, dictum quis interdum at, aliquam condimentum dui. Duis vitae nibh non magna volutpat condimentum. Praesent molestie mattis erat, quis blandit nisi dapibus a. Ut convallis aliquet diam quis rhoncus.
-										</p>
-										<p>
-											Nulla facilisi. Cras bibendum tristique molestie. Pellentesque placerat tellus vitae orci lobortis consequat. Integer vitae tortor justo, in semper leo. Duis accumsan tincidunt tellus ac ultrices. Donec lacinia posuere tristique. Integer vehicula lacus id sem ornare at mollis odio vehicula. Phasellus mauris est, viverra eget porttitor at, mollis ut urna. Pellentesque eu sem vel purus pellentesque imperdiet at ac sem.
-										</p>
-										<p>
-											Vivamus dui eros, tempor non consectetur dapibus, mattis vitae risus. Mauris blandit, risus ut mattis lacinia, est dui tincidunt est, id ornare tortor orci ac eros. Vivamus metus enim, commodo sed pretium eget, aliquam et arcu. Morbi imperdiet, tellus condimentum pellentesque consequat, nisi urna posuere nunc, sit amet rutrum elit ligula nec turpis. In metus mi, dapibus non placerat et, viverra vel purus. Nullam vitae velit purus, in condimentum magna. Etiam eu ipsum iaculis felis fringilla euismod. Suspendisse ac est quis nibh ultrices tristique. Donec nec sem risus, in pharetra ipsum. Curabitur sed quam nisi, at ultricies ligula. Donec adipiscing mattis justo non placerat. Pellentesque dui leo, egestas eu interdum in, faucibus ut neque. Sed et ligula sit amet leo tincidunt semper. Mauris interdum auctor nulla id convallis.
-										</p>
-									</section>
-									<div class="postMore">
-										<span class="toggleButton">READ MORE</span>
-										<span class="toggleButton" style="display:none">READ LESS</span>
-									</div>
-									<div class="clear" style="float:clear"></div>
-								</div>
-
-							</div>
-						</article>
-						<!-- POST -->
-						<article>
-							<div class="post span11">
-								<header>
-									<div class="postDate">
-										<span class="day">1</span>
-										<span class="month">July</span>
-										<span class="year">2012</span>
-									</div>
-									<!--<span class="postDate"> MAY <strong>5</strong> 2012 </span>-->
-									<div class="postTitle">
-										<span><h1>Post Title</h1></span>
-										<small> <span class="comments"> <i class="icon-comment"> </i> <span>0</span> </span> <span class="tags"> <i class="icon-tags"> </i> <span> <a href="#">software</a>, <a href="#">scala</a> </span> </span> <span class="author"> Posted by <a href="#">PPrang</a> </span> </small>
-									</div>
-
-								</header>
-								<div class="postContent">
-									<section class="summary">
-										<p>
-											Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-										</p>
-									</section>
-									<section class="fullText">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna diam, gravida id posuere a, tristique consectetur tellus. Maecenas pellentesque dapibus metus nec cursus. Proin vitae orci felis. Suspendisse in dui ligula, in sodales enim. Nulla quam dolor, ornare eget aliquet quis, ultrices vel purus. Integer id justo enim, eu hendrerit neque. In urna felis, rutrum eu tempor non, malesuada id odio. Nulla in felis quis nisl luctus tincidunt. In eget auctor sapien. Sed risus mauris, pretium sed aliquam eu, scelerisque vulputate justo. Proin at porta odio. Vivamus sodales massa ac neque ullamcorper dignissim. Donec sed eros vitae orci luctus imperdiet id nec sapien. Integer auctor nulla eu nulla posuere consectetur. Maecenas a est tellus, et fermentum lorem.
-										</p>
-										<p>
-											Praesent sapien sem, sollicitudin non varius sed, aliquet commodo urna. Nulla libero dolor, faucibus ac sodales nec, egestas suscipit tellus. Maecenas hendrerit interdum tortor et congue. Suspendisse laoreet facilisis augue. Praesent euismod magna id lorem venenatis volutpat. Maecenas in justo eget ante malesuada malesuada eget at odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										</p>
-										<p>
-											Fusce ultrices rutrum velit eget condimentum. Donec ac felis vel enim fermentum feugiat. Cras lacinia lacinia vestibulum. Nulla condimentum arcu et est egestas ut pretium odio pretium. Duis leo enim, pellentesque non pretium gravida, euismod in eros. Suspendisse odio tellus, dictum quis interdum at, aliquam condimentum dui. Duis vitae nibh non magna volutpat condimentum. Praesent molestie mattis erat, quis blandit nisi dapibus a. Ut convallis aliquet diam quis rhoncus.
-										</p>
-										<p>
-											Nulla facilisi. Cras bibendum tristique molestie. Pellentesque placerat tellus vitae orci lobortis consequat. Integer vitae tortor justo, in semper leo. Duis accumsan tincidunt tellus ac ultrices. Donec lacinia posuere tristique. Integer vehicula lacus id sem ornare at mollis odio vehicula. Phasellus mauris est, viverra eget porttitor at, mollis ut urna. Pellentesque eu sem vel purus pellentesque imperdiet at ac sem.
-										</p>
-										<p>
-											Vivamus dui eros, tempor non consectetur dapibus, mattis vitae risus. Mauris blandit, risus ut mattis lacinia, est dui tincidunt est, id ornare tortor orci ac eros. Vivamus metus enim, commodo sed pretium eget, aliquam et arcu. Morbi imperdiet, tellus condimentum pellentesque consequat, nisi urna posuere nunc, sit amet rutrum elit ligula nec turpis. In metus mi, dapibus non placerat et, viverra vel purus. Nullam vitae velit purus, in condimentum magna. Etiam eu ipsum iaculis felis fringilla euismod. Suspendisse ac est quis nibh ultrices tristique. Donec nec sem risus, in pharetra ipsum. Curabitur sed quam nisi, at ultricies ligula. Donec adipiscing mattis justo non placerat. Pellentesque dui leo, egestas eu interdum in, faucibus ut neque. Sed et ligula sit amet leo tincidunt semper. Mauris interdum auctor nulla id convallis.
-										</p>
-									</section>
-									<div class="postMore">
-										<span class="toggleButton">READ MORE</span>
-										<span class="toggleButton" style="display:none">READ LESS</span>
-									</div>
-									<div class="clear" style="float:clear"></div>
-								</div>
-
-							</div>
-						</article>
-						<!-- POST -->
-						<article>
-							<div class="post span11">
-								<header>
-									<div class="postDate">
-										<span class="day">1</span>
-										<span class="month">July</span>
-										<span class="year">2012</span>
-									</div>
-									<!--<span class="postDate"> MAY <strong>5</strong> 2012 </span>-->
-									<div class="postTitle">
-										<span><h1>Post Title</h1></span>
-										<small> <span class="comments"> <i class="icon-comment"> </i> <span>0</span> </span> <span class="tags"> <i class="icon-tags"> </i> <span> <a href="#">software</a>, <a href="#">scala</a> </span> </span> <span class="author"> Posted by <a href="#">PPrang</a> </span> </small>
-									</div>
-
-								</header>
-								<div class="postContent">
-									<section class="summary">
-										<p>
-											Lorem Ipsum is <b>simply dummy</b> text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-										</p>
-									</section>
-									<section class="fullText">
-										<p>
-											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin magna diam, gravida id posuere a, tristique consectetur tellus. Maecenas pellentesque dapibus metus nec cursus. Proin vitae orci felis. Suspendisse in dui ligula, in sodales enim. Nulla quam dolor, ornare eget aliquet quis, ultrices vel purus. Integer id justo enim, eu hendrerit neque. In urna felis, rutrum eu tempor non, malesuada id odio. Nulla in felis quis nisl luctus tincidunt. In eget auctor sapien. Sed risus mauris, pretium sed aliquam eu, scelerisque vulputate justo. Proin at porta odio. Vivamus sodales massa ac neque ullamcorper dignissim. Donec sed eros vitae orci luctus imperdiet id nec sapien. Integer auctor nulla eu nulla posuere consectetur. Maecenas a est tellus, et fermentum lorem.
-										</p>
-										<p>
-											Praesent sapien sem, sollicitudin non varius sed, aliquet commodo urna. Nulla libero dolor, faucibus ac sodales nec, egestas suscipit tellus. Maecenas hendrerit interdum tortor et congue. Suspendisse laoreet facilisis augue. Praesent euismod magna id lorem venenatis volutpat. Maecenas in justo eget ante malesuada malesuada eget at odio. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-										</p>
-										<p>
-											Fusce ultrices rutrum velit eget condimentum. Donec ac felis vel enim fermentum feugiat. Cras lacinia lacinia vestibulum. Nulla condimentum arcu et est egestas ut pretium odio pretium. Duis leo enim, pellentesque non pretium gravida, euismod in eros. Suspendisse odio tellus, dictum quis interdum at, aliquam condimentum dui. Duis vitae nibh non magna volutpat condimentum. Praesent molestie mattis erat, quis blandit nisi dapibus a. Ut convallis aliquet diam quis rhoncus.
-										</p>
-										<p>
-											Nulla facilisi. Cras bibendum tristique molestie. Pellentesque placerat tellus vitae orci lobortis consequat. Integer vitae tortor justo, in semper leo. Duis accumsan tincidunt tellus ac ultrices. Donec lacinia posuere tristique. Integer vehicula lacus id sem ornare at mollis odio vehicula. Phasellus mauris est, viverra eget porttitor at, mollis ut urna. Pellentesque eu sem vel purus pellentesque imperdiet at ac sem.
-										</p>
-										<p>
-											Vivamus dui eros, tempor non consectetur dapibus, mattis vitae risus. Mauris blandit, risus ut mattis lacinia, est dui tincidunt est, id ornare tortor orci ac eros. Vivamus metus enim, commodo sed pretium eget, aliquam et arcu. Morbi imperdiet, tellus condimentum pellentesque consequat, nisi urna posuere nunc, sit amet rutrum elit ligula nec turpis. In metus mi, dapibus non placerat et, viverra vel purus. Nullam vitae velit purus, in condimentum magna. Etiam eu ipsum iaculis felis fringilla euismod. Suspendisse ac est quis nibh ultrices tristique. Donec nec sem risus, in pharetra ipsum. Curabitur sed quam nisi, at ultricies ligula. Donec adipiscing mattis justo non placerat. Pellentesque dui leo, egestas eu interdum in, faucibus ut neque. Sed et ligula sit amet leo tincidunt semper. Mauris interdum auctor nulla id convallis.
-										</p>
-									</section>
-									<div class="postMore">
-										<span class="toggleButton">READ MORE</span>
-										<span class="toggleButton" style="display:none">READ LESS</span>
-									</div>
-									<div class="clear" style="float:clear"></div>
-								</div>
-
-							</div>
-						</article>
 					</div>
 				</section>
 
@@ -334,6 +142,7 @@
 		<script>
 			window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')
 		</script>
+		<script src="js/libs/moment-1.7.0.min.js"></script>
 		<script src="js/libs/ember-0.9.8.1.min.js"></script>
 		<script src="js/app.js"></script>
 		<script src="js/hablog.js"></script>
